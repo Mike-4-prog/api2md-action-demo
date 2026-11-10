@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       
       - name: Run api2md
         uses: Mike-4-prog/api2md@v1.0.1
@@ -23,4 +25,4 @@ jobs:
           git config user.email "actions@github.com"
           git add docs/API.md
           git commit -m "docs: auto-generate API documentation" || exit 0
-          git push
+          git push origin HEAD:${{ github.head_ref }}
