@@ -21,3 +21,12 @@ paths:
           required: true
           schema:
             type: string
+  /products:
+    get:
+      summary: Get products
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
