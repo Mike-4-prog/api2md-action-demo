@@ -10,6 +10,7 @@
 
 - [GET /users](#get-users)
 - [GET /users/{id}](#get-users-id)
+- [GET /products](#get-products)
 
 ---
 
@@ -38,5 +39,19 @@
 | Name | In | Required | Description |
 |------|----|----------|-------------|
 | `id` | path | Yes |  |
+
+---
+
+<a id='get-products'></a>
+
+### `GET` `/products`
+
+**Summary:** Get products
+
+**Parameters:**
+
+| Name | In | Required | Description |
+|------|----|----------|-------------|
+| `category` | query | No |  |
 
 ---
